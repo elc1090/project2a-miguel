@@ -6,7 +6,7 @@
 
 #### Deploy
 
-Acesso:
+Acesso: https://elc1090.github.io/project2a-miguel/
 
 #### Desenvolvedores
 
@@ -25,10 +25,7 @@ Miguel Mazuim da Silva
 
 #### Bastidores
 
-
-Preencha aqui um breve relato dos bastidores da realização deste exercício, com uma parte focada no trabalho em dupla e outra individual com impressões de cada participante.
-
-
+Procurei como acessa os commits via a API do github e adaptei o projeto para demonstrar esse commits.
 
 ---
 Projeto entregue para a disciplina de [Desenvolvimento de Software para a Web](http://github.com/andreainfufsm/elc1090-2023a) em 2023a
