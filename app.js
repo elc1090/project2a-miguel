@@ -15,18 +15,28 @@ gitHubForm.addEventListener('submit', (e) => {
     // Get the value of the GitHub username input field
     let gitHubUsername = usernameInput.value;
 
-    let repoUsername = repoInput.value;
+    let reposName = repoInput.value;
+
+    if(gitHubUsername == "" || repo == ""){
+        alert("Preencha todos os campos!");
+    }else{
 
     // Run GitHub API function, passing in the GitHub username
-    requestUserRepos(gitHubUsername,repoUsername)
+    requestUserRepos(gitHubUsername,reposName)
         .then(response => response.json()) // parse response into json
         .then(data => {
+            //Reseta o userCommits
+
+            let reset = document.getElementById('userCommits');
+
+            reset.innerHTML = "";
+
             // update html with data from github
             for (let i in data) {
-                // Get the ul with id of userRepos
+                // Get the ul with id of userCommits
 
                 if (data.message === "Not Found") {
-                    let ul = document.getElementById('userRepos');
+                    let ul = document.getElementById('userCommits');
 
                     // Create variable that will create li's to be added to ul
                     let li = document.createElement('li');
@@ -40,7 +50,7 @@ gitHubForm.addEventListener('submit', (e) => {
                     ul.appendChild(li);
                 } else {
 
-                    let ul = document.getElementById('userRepos');
+                    let ul = document.getElementById('userCommits');
 
                     // Create variable that will create li's to be added to ul
                     let li = document.createElement('li');
@@ -59,9 +69,10 @@ gitHubForm.addEventListener('submit', (e) => {
                 }
             }
         })
+    }
 })
 
-function requestUserRepos(username,repo) {
+function requestUserRepos(username,reposname) {
     // create a variable to hold the `Promise` returned from `fetch`
-    return Promise.resolve(fetch(`https://api.github.com/repos/${username}/${repo}/commits`));
+    return Promise.resolve(fetch(`https://api.github.com/repos/${username}/${reposname}/commits`));
 }

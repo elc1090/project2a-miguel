@@ -1,6 +1,6 @@
 # Projeto2a: GitHub API e DOM Manipulation
 
-![Screenshot do projeto](https://mdswanson.com/static/chops-ux-step-4.png "Screenshot do projeto").
+![Screenshot do projeto](assets/Temp.jpg "Screenshot do projeto").
 
 #### Deploy
 
@@ -9,7 +9,6 @@ Acesso: https://elc1090.github.io/project2a-miguel/
 #### Desenvolvedores
 
 Miguel Mazuim da Silva
-
 
 #### Ambiente de desenvolvimento
 
