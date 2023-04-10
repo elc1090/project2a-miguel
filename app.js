@@ -17,19 +17,19 @@ gitHubForm.addEventListener('submit', (e) => {
 
     let reposName = repoInput.value;
 
-    if(gitHubUsername == "" || repo == ""){
+    if(gitHubUsername == "" || reposName == ""){
         alert("Preencha todos os campos!");
     }else{
 
     // Run GitHub API function, passing in the GitHub username
     requestUserRepos(gitHubUsername,reposName)
         .then(response => response.json()) // parse response into json
-        .then(data => {
+        .then(data => {       
             //Reseta o userCommits
 
             let reset = document.getElementById('userCommits');
 
-            reset.innerHTML = "";
+            reset.innerHTML = "";     
 
             // update html with data from github
             for (let i in data) {
