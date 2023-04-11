@@ -74,5 +74,5 @@ gitHubForm.addEventListener('submit', (e) => {
 
 function requestUserRepos(username,reposname) {
     // create a variable to hold the `Promise` returned from `fetch`
-    return Promise.resolve(fetch(`https://api.github.com/repos/${username}/${reposname}/commits`));
+    return Promise.resolve(fetch(`https://api.github.com/repos/${username}/${reposname}/commits?per_page=100`));
 }
